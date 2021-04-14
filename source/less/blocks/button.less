@@ -1,0 +1,31 @@
+.button {
+  .font(21px; 700);
+  display: block;
+  text-decoration: none;
+  color: @text-color-second;
+  background-color: @background-color-main;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin: 0 auto;
+  cursor: pointer;
+
+  &:hover {
+    background-color: @button-hover-background;
+  }
+
+  &:active {
+    background-color: @button-down-background;
+    color: @button-down-title-color;
+  }
+
+  &:disabled {
+    background-color: @button-disabled-background;
+  }
+}
+
+.button--search-hotel {
+  width: 280px;
+}
