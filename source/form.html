@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Седона - форма отзыва</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page-body">
     <header class="page-header">
@@ -14,16 +15,16 @@
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
             <li class="main-nav__item">
-              <a href="index.html">Главная</a>
+              <a class="main-nav__link" href="index.html">Главная</a>
             </li>
             <li class="main-nav__item">
-              <a href="#">Фото и видео</a>
+              <a class="main-nav__link" href="#">Фото и видео</a>
             </li>
             <li class="main-nav__item">
-              <a>Форма отзыва</a>
+              <a class="main-nav__link">Форма отзыва</a>
             </li>
             <li class="main-nav__item">
-              <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+              <a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
             </li>
           </ul>
         </div>
@@ -31,6 +32,9 @@
     </header>
     <main class="page-main">
       <h1 class="visually-hidden">Страница формы отзыва</h1>
+      <div class="welcome">
+        <img class="welcome__image" src="https://via.placeholder.com/282x214" width="282" height="214" alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks!">
+      </div>
       <section class="feedback">
         <div class="feedback__wrapper">
           <header class="feedback__header">
@@ -44,41 +48,41 @@
             <legend class="feedback__legend">Представьтесь:</legend>
             <div class="introduce__wrapper">
               <label for="name-field">Имя*:</label>
-              <input class="feedback__input" type="text" name="name" id="name-field" placeholder="Петр" required>
+              <input class="feedback__input feedback__input--text" type="text" name="name" id="name-field" placeholder="Петр" required>
             </div>
             <div class="introduce__wrapper">
               <label for="surname-field">Фамилия*:</label>
-              <input class="feedback__input" type="text" name="surname" id="surname-field" placeholder="Иванов" required>
+              <input class="feedback__input feedback__input--text" type="text" name="surname" id="surname-field" placeholder="Иванов" required>
             </div>
             <div class="introduce__wrapper">
               <label for="patronymic-field">Отчество*:</label>
-              <input class="feedback__input" type="text" name="patronymic" id="patronymic-field" placeholder="Александрович" required>
+              <input class="feedback__input feedback__input--text" type="text" name="patronymic" id="patronymic-field" placeholder="Александрович" required>
             </div>
           </fieldset>
           <fieldset class="feedback__fieldset contacts">
             <legend class="feedback__legend">Контактная информация:</legend>
             <div class="contacts__wrapper">
               <label for="phone-field">Контактный телефон*:</label>
-              <input class="feedback__input feedback__input--iconed feedback__input--phone" type="tel" name="phone" id="phone-field" placeholder="Введите телефон" required>
+              <input class="feedback__input feedback__input--text feedback__input--iconed feedback__input--phone" type="tel" name="phone" id="phone-field" placeholder="Введите телефон" required>
             </div>
             <div class="contacts__wrapper">
               <label for="email-field">Электронная почта*:</label>
-              <input class="feedback__input feedback__input--iconed feedback__input--email" type="email" name="email" id="email-field" placeholder="Введите e-mail" required>
+              <input class="feedback__input feedback__input--text feedback__input--iconed feedback__input--email" type="email" name="email" id="email-field" placeholder="Введите e-mail" required>
             </div>
           </fieldset>
           <fieldset class="feedback__fieldset impressions">
             <legend class="feedback__legend">Ваше общее впечатление:</legend>
             <ul class="impressions__list">
               <li class="impressions__item">
-                <label for="maybe-good">Скорее положительное</label>
+                <label class="impressions__label" for="maybe-good">Скорее положительное</label>
                 <input class="impressions__input" type="radio" name="impressions" value="maybe-good" id="maybe-good" checked>
               </li>
               <li class="impressions__item">
-                <label for="maybe-bad">Скорее отрицательное</label>
+                <label class="impressions__label" for="maybe-bad">Скорее отрицательное</label>
                 <input class="impressions__input" type="radio" name="impressions" value="maybe-bad" id="maybe-bad">
               </li>
               <li class="impressions__item">
-                <label for="dont-know">Затрудняюсь ответить</label>
+                <label class="impressions__label" for="dont-know">Затрудняюсь ответить</label>
                 <input class="impressions__input" type="radio" name="impressions" value="dont-know" id="dont-know">
               </li>
             </ul>
@@ -87,19 +91,19 @@
             <legend class="feedback__legend">Посещенные достопримечательности</legend>
             <ul class="attractions__list">
               <li class="attractions__item">
-                <label for="devils-bridge">Мост Дьявола</label>
+                <label class="attractions__label" for="devils-bridge">Мост Дьявола</label>
                 <input class="attractions__input" type="checkbox" name="devils-bridge" id="devils-bridge" checked>
               </li>
               <li class="attractions__item">
-                <label for="mount-bell">Гора-Колокол</label>
+                <label class="attractions__label" for="mount-bell">Гора-Колокол</label>
                 <input class="attractions__input" type="checkbox" name="mount-bell" id="mount-bell" checked>
               </li>
               <li class="attractions__item">
-                <label for="slide-park">Слайд-парк</label>
+                <label class="attractions__label" for="slide-park">Слайд-парк</label>
                 <input class="attractions__input" type="checkbox" name="slide-park" id="slide-park" checked>
               </li>
               <li class="attractions__item">
-                <label for="red-rocks">Красные скалы</label>
+                <label class="attractions__label" for="red-rocks">Красные скалы</label>
                 <input class="attractions__input" type="checkbox" name="red-rocks" id="red-rocks">
               </li>
             </ul>
