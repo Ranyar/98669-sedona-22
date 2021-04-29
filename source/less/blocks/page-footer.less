@@ -3,7 +3,41 @@
   padding-bottom: 23px;
 }
 
+@media (min-width: @tablet-width) {
+  .page-footer__wrapper {
+    display: flex;
+  }
+}
+
 .page-footer__hashtag {
   color: @text-color-main;
   .font(21px; 700);
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__hashtag {
+    flex-basis: 256px;
+  }
+
+  .page-footer__social-list {
+    flex-basis: 256px;
+  }
+
+  .page-footer__copyright {
+    flex-basis: 256px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer__hashtag {
+    flex-basis: 400px;
+  }
+
+  .page-footer__social-list {
+    flex-basis: 400px;
+  }
+
+  .page-footer__copyright {
+    flex-basis: 400px;
+  }
 }
