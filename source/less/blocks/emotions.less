@@ -1,5 +1,5 @@
-@media (min-width: @tablet-width), (min-width: @desktop-width) {
-  .emotions {
+.emotions {
+  @media (min-width: @tablet-width), (min-width: @desktop-width) {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 4;
@@ -10,4 +10,57 @@
   .font(18px; 700);
   text-transform: none;
   color: @text-color-main;
+  padding: 2px;
+
+  @media (max-width: @mobile-width-only) {
+    width: 273px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 642px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 954px;
+  }
+}
+
+.emotions-wrapper {
+  @media (min-width: @tablet-width) {
+    width: 648px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 960px;
+  }
+}
+
+.emotions__submit-wrapper {
+  @media (min-width: @tablet-width), (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.emotions__button {
+  @media (max-width: @mobile-width-only) {
+    width: 280px;
+    margin: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 324px;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 480px;
+    margin: 0;
+  }
+}
+
+.emotions-required {
+  @media (max-width: @mobile-width-only) {
+    .visually-hidden;
+  }
 }

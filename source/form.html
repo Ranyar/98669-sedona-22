@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Седона - форма отзыва</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -61,8 +62,8 @@
           </fieldset>
           <fieldset class="feedback__fieldset contacts">
             <p class="feedback__legend">Контактная информация:</p>
-            <div class="contacts__wrapper">
-              <label for="phone-field">Контактный телефон*:</label>
+            <div class="contacts__wrapper contacts__wrapper--phone-phield">
+              <label for="phone-field"><span>Контактный </span>телефон*:</label>
               <input class="feedback__input feedback__input--text feedback__input--iconed feedback__input--phone" type="tel" name="phone" id="phone-field" placeholder="Введите телефон" required>
             </div>
             <div class="contacts__wrapper">
@@ -109,14 +110,16 @@
             </ul>
           </fieldset>
           <fieldset class="feedback__fieldset emotions">
-            <p>Опишите свои эмоции:</p>
+            <p class="feedback__legend">Опишите свои эмоции:</p>
             <div class="emotions-wrapper">
               <label for="describe-emotions"></label>
-              <textarea class="emotions__field" name="describe-emotions" id="describe-emotions" placeholder="">
-                Опишите подробно все свои восторги
+              <textarea class="emotions__field" name="describe-emotions" id="describe-emotions" placeholder="" rows="5">Опишите подробно все свои восторги
               </textarea>
             </div>
-            <button class="button" type="submit">Отправить отзыв</button>
+            <div class="emotions__submit-wrapper">
+              <button class="button emotions__button" type="submit">Отправить отзыв</button>
+              <p class="emotions-required">* — обязательные поля</p>
+            </div>
           </fieldset>
         </form>
       </section>

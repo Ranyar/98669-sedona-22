@@ -10,14 +10,26 @@
   list-style: none;
   margin: 0;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
   @media (min-width: @desktop-width) {
     display: flex;
+    justify-content: space-around;
   }
 }
 
 .attractions__item {
+  @media (min-width: @tablet-width) {
+    flex-basis: 324px;
+  }
+
   @media (min-width: @desktop-width) {
-    flex-basis: 25%;
+    flex-basis: 240px;
   }
 }
 
