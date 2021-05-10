@@ -3,6 +3,14 @@
   padding-bottom: 25px;
 }
 
+@media (min-width: @tablet-width), (min-width: @desktop-width) {
+  .feedback__form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+}
+
 .feedback__slogan {
   .font(18px; 700);
   color: @text-color-main;
