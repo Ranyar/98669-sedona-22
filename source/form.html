@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Седона - форма отзыва</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -45,7 +46,7 @@
         </div>
         <form class="feedback__form form-feedback" method="get" action="https://echo.htmlacademy.ru">
           <fieldset class="feedback__fieldset introduce">
-            <legend class="feedback__legend">Представьтесь:</legend>
+            <p class="feedback__legend">Представьтесь:</p>
             <div class="introduce__wrapper">
               <label for="name-field">Имя*:</label>
               <input class="feedback__input feedback__input--text" type="text" name="name" id="name-field" placeholder="Петр" required>
@@ -60,9 +61,9 @@
             </div>
           </fieldset>
           <fieldset class="feedback__fieldset contacts">
-            <legend class="feedback__legend">Контактная информация:</legend>
-            <div class="contacts__wrapper">
-              <label for="phone-field">Контактный телефон*:</label>
+            <p class="feedback__legend">Контактная информация:</p>
+            <div class="contacts__wrapper contacts__wrapper--phone-phield">
+              <label for="phone-field"><span>Контактный </span>телефон*:</label>
               <input class="feedback__input feedback__input--text feedback__input--iconed feedback__input--phone" type="tel" name="phone" id="phone-field" placeholder="Введите телефон" required>
             </div>
             <div class="contacts__wrapper">
@@ -71,7 +72,7 @@
             </div>
           </fieldset>
           <fieldset class="feedback__fieldset impressions">
-            <legend class="feedback__legend">Ваше общее впечатление:</legend>
+            <p class="feedback__legend">Ваше общее впечатление:</p>
             <ul class="impressions__list">
               <li class="impressions__item">
                 <label class="impressions__label" for="maybe-good">Скорее положительное</label>
@@ -88,7 +89,7 @@
             </ul>
           </fieldset>
           <fieldset class="feedback__fieldset attractions">
-            <legend class="feedback__legend">Посещенные достопримечательности</legend>
+            <p class="feedback__legend">Посещенные достопримечательности</p>
             <ul class="attractions__list">
               <li class="attractions__item">
                 <label class="attractions__label" for="devils-bridge">Мост Дьявола</label>
@@ -109,14 +110,16 @@
             </ul>
           </fieldset>
           <fieldset class="feedback__fieldset emotions">
-            <legend>Опишите свои эмоции:</legend>
+            <p class="feedback__legend">Опишите свои эмоции:</p>
             <div class="emotions-wrapper">
               <label for="describe-emotions"></label>
-              <textarea class="emotions__field" name="describe-emotions" id="describe-emotions" placeholder="">
-                Опишите подробно все свои восторги
+              <textarea class="emotions__field" name="describe-emotions" id="describe-emotions" placeholder="" rows="5">Опишите подробно все свои восторги
               </textarea>
             </div>
-            <button class="button" type="submit">Отправить отзыв</button>
+            <div class="emotions__submit-wrapper">
+              <button class="button emotions__button" type="submit">Отправить отзыв</button>
+              <p class="emotions-required">* — обязательные поля</p>
+            </div>
           </fieldset>
         </form>
       </section>
