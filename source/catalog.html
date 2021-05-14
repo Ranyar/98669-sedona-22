@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Седона - фото и видео</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -47,7 +48,11 @@
           <li class="photos__item photo-item photo-item--fullwided">
             <figure class="photo-item__figure">
               <a class="photo-item__link">
-                <img class="photo-item__image" src="https://via.placeholder.com/280x280" width="280" height="280" alt="Неродные просторы">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photo-1-desktop.jpg">
+                  <source media="(min-width: 768px)" srcset="img/photo-1-tablet.jpg">
+                  <img class="photo-item__image" src="img/photo-1-mobile.jpg" alt="Неродные просторы">
+                </picture>
               </a>
               <figcaption class="photo-item__caption">Неродные просторы</figcaption>
             </figure>
@@ -57,7 +62,11 @@
           <li class="photos__item photo-item">
             <figure class="photo-item__figure">
               <a class="photo-item__link">
-                <img class="photo-item__image" src="https://via.placeholder.com/280x280" width="280" height="280" alt="Местная растительность">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photo-2-desktop.jpg">
+                  <source media="(min-width: 768px)" srcset="img/photo-2-tablet.jpg">
+                  <img class="photo-item__image" src="img/photo-2-mobile.jpg" alt="Местная растительность">
+                </picture>
               </a>
               <figcaption class="photo-item__heading">Местная растительность</figcaption>
             </figure>
@@ -67,7 +76,11 @@
           <li class="photos__item photo-item">
             <figure class="photo-item__figure">
               <a class="photo-item__link">
-                <img class="photo-item__image" src="https://via.placeholder.com/280x280" width="280" height="280" alt="Дорога на север">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photo-3-desktop.jpg">
+                  <source media="(min-width: 768px)" srcset="img/photo-3-tablet.jpg">
+                  <img class="photo-item__image" src="img/photo-3-mobile.jpg" alt="Дорога на север">
+                </picture>
               </a>
               <figcaption class="photo-item__heading">Дорога на север</figcaption>
             </figure>
@@ -77,7 +90,11 @@
           <li class="photos__item photo-item">
             <figure class="photo-item__figure">
               <a class="photo-item__link">
-                <img class="photo-item__image" src="https://via.placeholder.com/280x280" width="280" height="280" alt="Мост Дьявола">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photo-4-desktop.jpg">
+                  <source media="(min-width: 768px)" srcset="img/photo-4-tablet.jpg">
+                  <img class="photo-item__image" src="img/photo-4-mobile.jpg" alt="Мост Дьявола">
+                </picture>
               </a>
               <figcaption class="photo-item__heading">Мост Дьявола</figcaption>
             </figure>
@@ -89,7 +106,7 @@
       <section class="video">
         <h2 class="video__heading">Все еще сомневаетесь?</h2>
         <p class="video__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
-        <video width="320" height="201" poster="https://via.placeholder.com/320x201">
+        <video class="video__background">
         </video>
         <div class="video__controls">
           <div class="video__scale">
