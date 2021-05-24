@@ -1,0 +1,115 @@
+.modal {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
+  background: @mobile-menu-item-down-title-color;
+
+  &--error-opened {
+    display: flex;
+  }
+
+  &--feedback-opened {
+    display: flex;
+  }
+}
+
+.modal__container {
+  background-color: @text-color-second;
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+  width: 320px;
+  padding: 0;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 400px;
+  }
+}
+
+.modal__container--feedback {
+  @media (min-width: @tablet-width) {
+    width: 640px;
+  }
+}
+
+.modal__error {
+  min-height: 280px;
+
+  & .modal__container {
+    padding-bottom: 35px;
+  }
+}
+
+.modal--feedback {
+  min-height: 323px;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: normal;
+  text-align: center;
+  color: @text-color-main;
+}
+
+.modal__title {
+  font-weight: bold;
+  padding: 0 0 25px;
+  margin: 0;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-align: center;
+  color: @text-color-main;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 40px;
+    padding: 0 37px 25px;
+  }
+}
+
+.modal__description-error {
+  margin: 0;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: normal;
+  text-align: center;
+  color: @text-color-main;
+  padding: 0 5px 0 5px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 40px;
+  }
+}
+
+.modal__description-feedback {
+  margin: 0;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: normal;
+  text-align: center;
+  color: @text-color-main;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 29px;
+    margin-bottom: 28px;
+  }
+}
+
+.modal__container-text-feedback {
+  padding: 47px 38px 40px 38px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 9px;
+  }
+}
+
+.modal__container-text-error {
+  padding: 48px 38px 0 38px;
+}

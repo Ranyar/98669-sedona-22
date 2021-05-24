@@ -1,5 +1,9 @@
 .page-header {
   position: relative;
+
+  @media (max-width: @mobile-width-only) {
+    padding-bottom: 56px;
+  }
 }
 
 .page-header__logo {
@@ -10,6 +14,12 @@
   height: 84px;
   background: url("../../img/logotype-mobile.svg");
   background-size: 102px 84px;
+
+  @media (max-width: @mobile-width-only) {
+    &--menu-opened {
+      transform: translate(107%, 264%);
+    }
+  }
 
   @media (min-width: @tablet-width) {
     background: url("../../img/logotype-tablet.svg");

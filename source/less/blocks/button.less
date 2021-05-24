@@ -8,7 +8,7 @@
   border: none;
   outline: none;
   padding-top: 15px;
-  padding-bottom: 15px;
+  padding-bottom: 17px;
   margin: 0 auto;
   cursor: pointer;
 
@@ -27,5 +27,47 @@
 
   &--search-hotel {
     width: 280px;
+
+    @media (min-width: @tablet-width) {
+      min-width: 458px;
+      margin-top: 36px;
+    }
+
+    @media (min-width: @desktop-width) {
+      min-width: 458px;
+      margin-top: 41px;
+    }
+  }
+}
+
+.button--modal-error,
+.button--modal-feedback {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 18px;
+}
+
+.button--modal-error {
+  width: 180px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 47px;
+    width: 272px;
+  }
+}
+
+.button--modal-feedback {
+  border: 20px solid @background-color-fourth;
+  width: 100%;
+  line-height: 26px;
+
+  @media (min-width: @tablet-width) {
+    border-top: 47px solid @background-color-fourth;
+    border-bottom: 47px solid @background-color-fourth;
+    border-left: 90px solid @background-color-fourth;
+    border-right: 90px solid @background-color-fourth;
+    font-size: 21px;
+    padding-top: 20px;
+    padding-bottom: 12px;
   }
 }

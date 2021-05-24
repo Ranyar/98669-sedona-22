@@ -1,13 +1,138 @@
+.reason {
+  padding: 0 49px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 33px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 55px;
+  }
+}
+
 .reason__title {
   margin: 0;
+  padding: 34px 5px 30px;
+  font-size: 18px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+    padding: 43px 10px 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 46px 65px 10px;
+  }
 }
 
-.reasons__number {
+.reason__title.reason__title--first {
+  @media (max-width: @mobile-width-only) {
+    font-size: 18px;
+    padding: 47px 5px 9px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 40px 10px 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 46px 65px 10px;
+  }
+}
+
+.reason__title.reason__title--second {
+  @media (max-width: @mobile-width-only) {
+    padding: 0;
+    margin-bottom: 9px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 43px 20px 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 51px 70px 10px;
+  }
+}
+
+.reason__title.reason__title--third {
+  @media (max-width: @mobile-width-only) {
+    padding: 0;
+    margin-bottom: 9px;
+  }
+}
+
+.reason__title.reason__title--fourth {
+  @media (max-width: @mobile-width-only) {
+    padding: 0;
+    margin-bottom: 9px;
+
+    &::after {
+      position: absolute;
+      display: block;
+      content: "";
+      background-color: @reasons-border-background;
+      background-repeat: no-repeat;
+      height: 1px;
+      width: 280px;
+      left: 20px;
+      top: -1px;
+    }
+  }
+}
+
+.reason__title.reason__title--fifth {
+  @media (max-width: @mobile-width-only) {
+    padding: 0;
+    margin-bottom: 9px;
+
+    &::after {
+      position: absolute;
+      display: block;
+      content: "";
+      background-color: @reasons-border-background;
+      background-repeat: no-repeat;
+      height: 1px;
+      width: 280px;
+      left: 20px;
+      top: -1px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 43px 20px 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 46px 65px 10px;
+  }
+}
+
+.reason__number {
   .font(@line-height: 21px);
 }
 
-.reasons__description {
-  padding: 0;
+.reason__description {
   margin: 0;
+  padding: 15px 0 10px 0;
   .font(@line-height: 21px);
+  text-transform: uppercase;
+  line-height: 21px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 21px;
+  }
+
+  & br {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
+  }
 }
