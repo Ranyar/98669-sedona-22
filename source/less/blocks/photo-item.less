@@ -1,35 +1,111 @@
-.photo-item__figure {
+/*.photo-item__figure {
   margin: 0;
+}*/
+
+.photo-item__image {
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+  width: 100%;
 }
 
 .photo-item__caption {
   .font(14px; 700; 24px);
   color: @text-color-main;
+  text-transform: uppercase;
+  text-align: left;
+  padding: 10px 0 0 0;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 16px 0 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    color: @text-color-second;
+  }
 }
 
 .photo-item__author {
   .font(@line-height: 24px);
   text-transform: none;
-}
+  text-align: left;
+  color: @plain-text-color;
+  margin: 0;
+  padding: 0 0 10px 0;
 
-.photo-item__like-button {
-  cursor: pointer;
-  background: url("../img/icon-like.svg") 100% 100% no-repeat;
-}
-
-.photo-item__likes-counter {
-  .font(14px; 700; 24px);
-  color: @text-color-main;
-}
-
-.photo-item--fullwided {
   @media (min-width: @tablet-width) {
-    grid-column-start: 1;
-    grid-column-end: 3;
+    padding: 0 0 16px 0;
   }
 
   @media (min-width: @desktop-width) {
-    grid-column-start: 1;
-    grid-column-end: 4;
+    color: @text-color-second;
+  }
+}
+
+.photo-item__likes {
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    width: 84px;
+    display: flex;
+  }
+}
+
+.photo-item__like-icon {
+  fill: @text-color-main;
+  opacity: 0.3;
+  cursor: pointer;
+
+  @media (min-width: @desktop-width) {
+    fill: @text-color-second;
+    opacity: 1;
+  }
+}
+
+.photo-item__likes-counter {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: left;
+  padding: 0 0 0 10px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 0 0 8px;
+  }
+
+  @media (min-width: @desktop-width) {
+    color: @text-color-second;
+  }
+}
+
+.photo-item__information {
+  padding: 0 0 15px 0;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 0 20px;
+
+    @media (min-width: @tablet-width) {
+      padding: 0 0 0 20px;
+    }
+  }
+
+  &--color {
+    @media (min-width: @tablet-width) {
+      background-color: #f2f2f2;
+      position: relative;
+    }
+
+    @media (min-width: @desktop-width) {
+      background-color: rgba(0, 0, 0, 0.3);
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
   }
 }

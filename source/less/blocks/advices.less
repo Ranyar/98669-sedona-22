@@ -1,38 +1,124 @@
-/*.advices {
-  display: flex;
-  flex-wrap: nowrap;
-}
-*/
-
-.advices__item {
-  box-sizing: border-box;
+.advices {
+  position: relative;
 
   @media (max-width: @mobile-width-only) {
-    padding-left: 70px;
-    padding-right: 40px;
+    padding: 0 24px 0 69px;
+    text-align: left;
   }
 
   @media (min-width: @tablet-width) {
-    width: 256px;
-    height: 330px;
+    padding-top: 158px;
+    padding-left: 36px;
+    padding-right: 36px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 400px;
-    height: 330px;
+    padding-left: 58px;
+    padding-right: 58px;
   }
 }
 
-.advices__title {
-  .font(18px; 700);
-  color: @text-color-main;
-  margin: 0;
-  padding: 0;
-  margin-bottom: 23px;
-}
 
 .advices__description {
   margin: 0;
-  padding: 0;
-  margin-bottom: 30px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 21px;
+  }
+}
+
+.advices__item:not(:last-child) {
+  padding-bottom: 24px;
+}
+
+.advices__title {
+  font-size: 18px;
+  margin: 0;
+
+  @media (max-width: @mobile-width-only) {
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+    padding-bottom: 23px;
+  }
+}
+
+.advices p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.advices::before {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: @tablet-width) {
+    width: 76px;
+    height: 76px;
+    top: 57px;
+    left: calc(50% - 38px);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .advices.reasons__item--living::before {
+    background-size: 75px 72px;
+    bottom: 59px;
+  }
+
+  .advices.reasons__item--souvenirs::before {
+    background-size: 64px 75px;
+  }
+
+  .advices.reasons__item--food::before {
+    background-size: 76px 68px;
+    top: 63px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .advices.reasons__item--souvenirs::before {
+    left: calc(50% - 33px);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advices.reasons__item--food {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .advices.reasons__item--souvenirs {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .advices.reasons__item--food {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .advices.reasons__item--souvenirs {
+    order: 3;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+.advices__hide {
+  display: none;
+}
+
+@media (min-width: @desktop-width) {
+  .advices__hide {
+    display: block;
+  }
 }

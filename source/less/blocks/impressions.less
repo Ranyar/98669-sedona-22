@@ -9,11 +9,104 @@
 .impressions__list {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 2px 0 0 0;
+
+  @media (max-width: @mobile-width-only) {
+    &:last-child::after {
+      content: "";
+      position: absolute;
+      background-color: @button-disabled-background;
+      width: 320px;
+      height: 1px;
+      bottom: -3px;
+      left: -20px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 37px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 149px;
+  }
 }
 
 .impressions__label {
   .font(18px; 700);
   text-transform: none;
   color: @text-color-main;
+  display: block;
+  cursor: pointer;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  padding-left: 78px;
+}
+
+.impressions__item {
+  position: relative;
+  margin-bottom: 9px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 19px;
+  }
+}
+
+.impressions__input {
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  z-index: 1;
+  opacity: 0;
+  margin: 0;
+}
+
+.impressions__input + label::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 56px;
+  height: 56px;
+  background-color: @radio-button-background;
+  border-radius: 50%;
+}
+
+.impressions__input:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 19px;
+  left: 18px;
+  width: 22px;
+  height: 22px;
+  background-color: @plain-text-color;
+  border-radius: 50%;
+}
+
+.impressions__input:checked + label:active::after {
+  opacity: 0.3;
+}
+
+.impressions__input + label:hover::before {
+  background-color: @radio-button-hover-background;
+}
+
+.impressions__input:focus + label::before {
+  background-color: @radio-button-hover-background;
+}
+
+.impressions__input:active + label::before {
+  background-color: @checkbox-down-background;
+}
+
+.impressions__label--maybe-good {
+  padding-left: 61px;
+}
+
+.impressions__label--maybe-bad {
+  padding-left: 56px;
+}
+
+.impressions__label--dont-know {
+  padding-left: 51px;
 }

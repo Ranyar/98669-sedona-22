@@ -15,9 +15,57 @@
   }
 }
 
+.photos__wrapper {
+  @media (max-width: @mobile-width-only) {
+    position: relative;
+  }
+}
+
+.photos__header {
+  padding: 15px 0 20px 0;
+
+  @media (max-width: @mobile-width-only) {
+    &::after {
+      position: absolute;
+      content: "";
+      width: 320px;
+      height: 1px;
+      background-color: @button-disabled-background;
+      left: -20px;
+      bottom: 1px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 33px 0 63px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 70px 0 65px 0;
+  }
+}
+
 .photos__slogan {
   .font(18px; 700);
   color: @text-color-main;
+  margin-bottom: 26px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    margin-bottom: 34px;
+  }
+}
+
+.photos__intro {
+  line-height: 24px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 101px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 377px 0;
+  }
 }
 
 .photos__list {
@@ -25,21 +73,40 @@
   margin: 0;
   padding: 0;
 
+  @media (max-width: @mobile-width-only) {
+    position: relative;
+  }
+
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 480px 347px 347px;
   }
 
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 400px 267px;
   }
 }
 
 .photos__item {
   text-align: left;
+  position: relative;
+
+  @media (max-width: @mobile-width-only) {
+    padding-top: 21px;
+    padding-bottom: 2px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 320px;
+      height: 1px;
+      background-color: @button-disabled-background;
+      left: -20px;
+    }
+  }
 
   &:nth-child(2n) {
     @media (min-width: @tablet-width), (min-width: @desktop-width) {
@@ -69,5 +136,17 @@
       grid-column-start: 3;
       grid-column-end: 4;
     }
+  }
+}
+
+.photos__item--fullwided {
+  @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: 4;
   }
 }
