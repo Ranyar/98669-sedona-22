@@ -7,6 +7,7 @@
 
   @media (min-resolution: 2dppx) {
     background-image: url("../../img/intro-triangle.svg"), url("../../img/welcome-background-mobile@2x.jpg");
+    background-size: cover;
   }
 
   @media (min-width: @tablet-width) {
@@ -16,6 +17,12 @@
 
   @media (min-width: @tablet-width) and (min-resolution: 2dppx) {
     background-image: url("../../img/intro-triangle.svg"), url("../../img/welcome-background-desktop@2x.jpg");
+    background-size: auto, cover;
+  }
+
+  @media (min-width: @desktop-width) and (min-resolution: 2dppx) {
+    background-image: url("../../img/intro-triangle.svg"), url("../../img/welcome-background-desktop@2x.jpg");
+    background-size: auto, cover;
   }
 }
 
