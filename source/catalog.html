@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Седона - фото и видео</title>
-    <link rel="stylesheet" href="css/style.css">
-    <!--<link rel="stylesheet" href="css/style.min.css">-->
+    <!--<link rel="stylesheet" href="css/style.css">-->
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicon/16.png">
@@ -16,11 +16,24 @@
   <body class="page-body">
     <div class="page-wrapper">
       <header class="page-header">
-        <a class="page-header__logo page-header__logo--menu-opened"></a><!--Класс page-header__logo--menu-opened должен добавляться при открытии мобильного меню-->
-        <nav class="main-nav page-header__nav">
-          <button class="main-nav__toggle main-nav__toggle--menu-opened" type="button">
+        <a class="page-header__logo page-header__logo--menu-opened" href="index.html"><!-- Класс с модификатором menu-opened позиционирует логотип
+         при открытом мобильном меню. -->
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
+            <img src="img/logotype-mobile.svg" class="page-header__logo-image" width="102" height="84" alt="Логотип Sedona">
+          </picture>
+        </a>
+        <nav class="main-nav page-header__nav "><!-- Класс с модификатором closed вместо opened прячет меню. -->
+          <button class="main-nav__toggle main-nav__toggle--menu-opened main-nav__toggle--icon-hidden" type="button"><!-- Класс с модификатором
+          icon-hidden прячет иконку меню. Класс с модификатором menu-opened позиционирует кнопку меню при открытом мобильном меню. -->
             <span class="visually-hidden">Открыть меню</span>
-          </button><!--Класс main-nav__toggle--menu-opened должен добавляться при открытии мобильного меню-->
+          </button>
+          <button class="main-nav__cross main-nav__cross--menu-opened main-nav__cross--icon-hidden" type="button"><!-- Класс с модификатором
+          menu-opened позиционирует иконку-крестик при открытом мобильном меню.
+          Класс с модификатором icon-hidden прячет иконку меню. -->
+            <span class="visually-hidden">Закрыть меню</span>
+          </button>
           <div class="main-nav__wrapper">
             <ul class="main-nav__list">
               <li class="main-nav__item">
@@ -58,10 +71,10 @@
                 <picture>
                   <source media="(min-width: 1200px)" type="image/jpeg" srcset="img/photo-1-desktop.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" type="image/jpeg" srcset="img/photo-1-tablet.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
-                  <img  class="photo-item__image" src="img/photo-1-mobile.jpg" srcset="img/photo-1-mobile@2x.jpg 2x" alt="неродные просторы">
                   <source media="(min-width: 1200px)" type="image/webp" srcset="img/photo-1-desktop.webp 1x, img/photo-1-desktop@2x.webp 2x">
                   <source media="(min-width: 768px)" type="image/webp" srcset="img/photo-1-tablet.webp 1x, img/photo-1-tablet@2x.webp 2x">
                   <source  type="image/webp" srcset="img/photo-1-mobile.webp 1x, img/photo-1-mobile@2x.webp 2x">
+                  <img  class="photo-item__image" src="img/photo-1-mobile.jpg" srcset="img/photo-1-mobile@2x.jpg 2x" alt="неродные просторы">
                 </picture>
               </a>
               <div class="photo-item__information photo-item__information--color">
@@ -83,10 +96,10 @@
                 <picture>
                   <source media="(min-width: 1200px)" type="image/jpeg" srcset="img/photo-2-desktop.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" type="image/jpeg" srcset="img/photo-2-tablet.jpg 1x, img/photo-2-tablet@2x.jpg 2x">
-                  <img class="photo-item__image" src="img/photo-2-mobile.jpg" srcset="img/photo-2-mobile@2x.jpg 2x" alt="Местная растительность">
                   <source media="(min-width: 1200px)" type="image/webp" srcset="img/photo-2-desktop.webp 1x, img/photo-2-desktop@2x.webp 2x">
                   <source media="(min-width: 768px)" type="image/webp" srcset="img/photo-2-tablet.webp 1x, img/photo-2-tablet@2x.webp 2x">
                   <source  type="image/webp" srcset="img/photo-2-mobile.webp 1x, img/photo-2-mobile@2x.webp 2x">
+                  <img class="photo-item__image" src="img/photo-2-mobile.jpg" srcset="img/photo-2-mobile@2x.jpg 2x" alt="Местная растительность">
                 </picture>
               </a>
               <div class="photo-item__information photo-item__information--color">
@@ -108,10 +121,10 @@
                 <picture>
                   <source media="(min-width: 1200px)" type="image/jpeg" srcset="img/photo-3-desktop.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" type="image/jpeg" srcset="img/photo-3-tablet.jpg 1x, img/photo-3-tablet@2x.jpg 2x">
-                  <img  class="photo-item__image" src="img/photo-3-mobile.jpg" srcset="img/photo-3-mobile@2x.jpg 2x" alt="Дорога на север">
                   <source media="(min-width: 1200px)" type="image/webp" srcset="img/photo-3-desktop.webp 1x, img/photo-3-desktop@2x.webp 2x">
                   <source media="(min-width: 768px)" type="image/webp" srcset="img/photo-3-tablet.webp 1x, img/photo-3-tablet@2x.webp 2x">
                   <source  type="image/webp" srcset="img/photo-3-mobile.webp 1x, img/photo-3-mobile@2x.webp 2x">
+                  <img  class="photo-item__image" src="img/photo-3-mobile.jpg" srcset="img/photo-3-mobile@2x.jpg 2x" alt="Дорога на север">
                 </picture>
               </a>
               <div class="photo-item__information photo-item__information--color">
@@ -133,10 +146,10 @@
                 <picture>
                   <source media="(min-width: 1200px)" type="image/jpeg" srcset="img/photo-4-desktop.jpg 1x, img/photo-4-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" type="image/jpeg" srcset="img/photo-4-tablet.jpg 1x, img/photo-4-tablet@2x.jpg 2x">
-                  <img  class="photo-item__image" src="img/photo-4-mobile.jpg" srcset="img/photo-4-mobile@2x.jpg 2x" alt="Мост дьявола">
                   <source media="(min-width: 1200px)" type="image/webp" srcset="img/photo-4-desktop.webp 1x, img/photo-4-desktop@2x.webp 2x">
                   <source media="(min-width: 768px)" type="image/webp" srcset="img/photo-4-tablet.webp 1x, img/photo-4-tablet@2x.webp 2x">
                   <source  type="image/webp" srcset="img/photo-4-mobile.webp 1x, img/photo-4-mobile@2x.webp 2x">
+                  <img  class="photo-item__image" src="img/photo-4-mobile.jpg" srcset="img/photo-4-mobile@2x.jpg 2x" alt="Мост дьявола">
                 </picture>
               </a>
               <div class="photo-item__information photo-item__information--color">

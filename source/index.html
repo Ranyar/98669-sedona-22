@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
-    <link rel="stylesheet" href="css/style.css">
-    <!--<link rel="stylesheet" href="css/style.min.css">-->
+    <!--link rel="stylesheet" href="css/style.css">-->
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicon/16.png">
@@ -16,14 +16,24 @@
   <body class="page-body">
     <div class="page-wrapper">
       <header class="page-header">
-        <a class="page-header__logo page-header__logo--menu-opened"></a><!--Класс page-header__logo--menu-opened должен добавляться при открытии мобильного меню-->
-        <nav class="main-nav page-header__nav main-nav--opened">
-          <button class="main-nav__toggle main-nav__toggle--menu-opened" type="button">
+        <a class="page-header__logo page-header__logo--menu-opened"><!-- Класс с модификатором menu-opened позиционирует логотип
+         при открытом мобильном меню. -->
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
+            <img src="img/logotype-mobile.svg" class="page-header__logo-image" width="102" height="84" alt="Логотип Sedona">
+          </picture>
+        </a>
+        <nav class="main-nav page-header__nav main-nav--opened"><!-- Класс с модификатором closed вместо opened прячет меню. -->
+          <button class="main-nav__toggle main-nav__toggle--menu-opened main-nav__toggle--icon-hidden" type="button"><!-- Класс с модификатором
+          icon-hidden прячет иконку меню. Класс с модификатором menu-opened позиционирует кнопку меню при открытом мобильном меню. -->
             <span class="visually-hidden">Открыть меню</span>
-          </button><!--Класс main-nav__toggle--menu-opened должен добавляться при открытии мобильного меню-->
-          <button class="main-nav__cross main-nav__cross--menu-opened" type="button">
+          </button>
+          <button class="main-nav__cross main-nav__cross--menu-opened main-nav__cross--icon-hidden" type="button"><!-- Класс с модификатором
+          menu-opened позиционирует иконку-крестик при открытом мобильном меню.
+          Класс с модификатором icon-hidden прячет иконку меню. -->
             <span class="visually-hidden">Закрыть меню</span>
-          </button><!--Класс main-nav__cross--menu-opened должен добавляться при открытии мобильного меню-->
+          </button>
           <div class="main-nav__wrapper">
             <ul class="main-nav__list">
               <li class="main-nav__item">
@@ -99,12 +109,12 @@
               <li class="reasons__item reason reasons__item--colored reasons__item--colored-thin">
                 <h3 class="reason__title reason__title--fourth">Красивая дорога</h3>
                 <span class="reason__number">&#8212; №4 &#8212;</span>
-                <p class="reason__description reason__description--fourth">Ехать в Седону из<br> Лас-Вегаса совсем<br> не скучно!</p>
+                <p class="reason__description reason__description--fourth">Ехать в Седону из&nbsp;<br class="reason__brake-first">Лас-Вегаса совсем&nbsp;<br class="reason__brake-second">не скучно!</p>
               </li>
               <li class="reasons__item reason reasons__item--colored">
                 <h3 class="reason__title reason__title--fifth">Мало туристов</h3>
                 <span class="reason__number">&#8212; №5 &#8212;</span>
-                <p class="reason__description">Большинство едет в<br> Гранд Каньон и<br> толпится там</p>
+                <p class="reason__description">Большинство едет в&nbsp;<br class="reason__brake-first">Гранд Каньон и&nbsp;<br class="reason__brake-second">толпится там</p>
               </li>
             </ul>
           </div>

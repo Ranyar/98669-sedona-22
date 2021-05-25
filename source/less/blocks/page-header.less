@@ -12,8 +12,6 @@
   transform: translateX(107%);
   width: 102px;
   height: 84px;
-  background: url("../../img/logotype-mobile.svg");
-  background-size: 102px 84px;
 
   @media (max-width: @mobile-width-only) {
     &--menu-opened {
@@ -22,15 +20,16 @@
   }
 
   @media (min-width: @tablet-width) {
-    background: url("../../img/logotype-tablet.svg");
     transform: translateX(326%);
   }
 
   @media (min-width: @desktop-width) {
     width: 187px;
     height: 97px;
-    background: url("../../img/logotype-desktop.svg");
-    background-size: 187px 97px;
     transform: translateX(271%);
   }
+}
+
+.page-header__logo-image {
+  width: 100%;
 }

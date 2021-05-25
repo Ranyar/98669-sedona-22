@@ -123,16 +123,24 @@
   @media (min-width: @tablet-width) {
     padding-top: 21px;
   }
+}
 
-  & br {
+.reason__brake-first {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: @desktop-width) {
     display: none;
+  }
+}
 
-    @media (min-width: @tablet-width) {
-      display: block;
-    }
+.reason__brake-second {
+  display: none;
 
-    @media (min-width: @desktop-width) {
-      display: none;
-    }
+  @media (min-width: @tablet-width) {
+    display: block;
   }
 }
