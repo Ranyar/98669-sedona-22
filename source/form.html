@@ -24,7 +24,7 @@
             <img src="img/logotype-mobile.svg" class="page-header__logo-image" width="102" height="84" alt="Логотип Sedona">
           </picture>
         </a>
-        <nav class="main-nav page-header__nav main-nav__menu-opened"><!-- Класс с модификатором menu-closed вместо opened прячет меню. -->
+        <nav class="main-nav page-header__nav main-nav--opened"><!-- Класс с модификатором closed вместо opened прячет меню. -->
           <button class="main-nav__toggle main-nav__toggle--menu-opened main-nav__toggle--icon-hidden" type="button"><!-- Класс с модификатором
           icon-hidden прячет иконку меню. Класс с модификатором menu-opened позиционирует кнопку меню при открытом мобильном меню. -->
             <span class="visually-hidden">Открыть меню</span>
@@ -191,6 +191,7 @@
         </div>
       </footer>
       <section class="modal modal--error"><!-- Класс с модификатором opened открывает модальное окно-->
+        <h2 class="visually-hidden">Ошибка</h2>
         <div class="modal__container">
           <div class="modal__container-text-error">
             <p class="modal__title">Что-то пошло не так!</p>
@@ -200,6 +201,7 @@
         </div>
       </section>
       <section class="modal modal--feedback"><!-- Класс с модификатором opened открывает модальное окно-->
+        <h2 class="visually-hidden">Успех</h2>
         <div class="modal__container modal__container--feedback">
           <div class="modal__container-text-feedback">
             <p class="modal__title">Ваш отзыв отправлен!</p>
