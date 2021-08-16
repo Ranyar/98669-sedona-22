@@ -20,7 +20,8 @@
     "postcss-csso": "5.0.1",
     "stylelint": "13.12.0",
     "stylelint-config-htmlacademy": "0.1.4",
-    "merge": ">=2.1.1"
+    "merge": ">=2.1.1",
+    "deep-extend": ">=0.5.1"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
